@@ -28,14 +28,14 @@ extension ShareListPresenter: ShareListPresenterInterface {
 
     func viewDidLoad() {
         self.getCompanies()
-        self.view?.isLoading(true)
     }
     
     func reloadView() {
-        
+        self.getCompanies()
     }
     
     private func getCompanies() {
+        self.view?.isLoading(true)
         self.interactor.getCompanies()
     }
     

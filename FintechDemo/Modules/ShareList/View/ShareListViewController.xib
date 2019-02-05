@@ -22,13 +22,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-5e-1dT">
-                    <rect key="frame" x="0.0" y="62" width="375" height="605"/>
+                    <rect key="frame" x="0.0" y="62" width="375" height="555"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="76Z-dL-H1r"/>
                         <outlet property="delegate" destination="-1" id="tyj-rZ-gKI"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-nP-YwX" userLabel="Refresh">
+                    <rect key="frame" x="154.5" y="627" width="66" height="30"/>
+                    <state key="normal" title="REFRESH"/>
+                    <connections>
+                        <action selector="refreshButtonClicked:" destination="-1" eventType="touchUpInside" id="GJJ-rO-V4n"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDc-Kd-5xi">
                     <rect key="frame" x="16" y="30" width="150" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -47,10 +54,12 @@
                 <constraint firstItem="8rV-oO-UTq" firstAttribute="top" secondItem="oDc-Kd-5xi" secondAttribute="top" id="2U4-rU-B8j"/>
                 <constraint firstItem="oDc-Kd-5xi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="2WB-Gv-kcR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8rV-oO-UTq" secondAttribute="trailing" constant="16" id="2bs-rv-yZu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uvi-5e-1dT" secondAttribute="bottom" id="5qk-WT-uSS"/>
+                <constraint firstItem="bAM-nP-YwX" firstAttribute="top" secondItem="uvi-5e-1dT" secondAttribute="bottom" constant="10" id="6S0-FO-cbE"/>
                 <constraint firstItem="uvi-5e-1dT" firstAttribute="top" secondItem="oDc-Kd-5xi" secondAttribute="bottom" constant="8" id="Dfb-5l-Put"/>
                 <constraint firstItem="uvi-5e-1dT" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="KvA-m3-csl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bAM-nP-YwX" secondAttribute="bottom" constant="10" id="WuG-d2-lMa"/>
                 <constraint firstItem="uvi-5e-1dT" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bcC-Z8-cww"/>
+                <constraint firstItem="bAM-nP-YwX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="c0N-Cy-bhc"/>
                 <constraint firstItem="oDc-Kd-5xi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cKH-gU-UtH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

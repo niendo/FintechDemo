@@ -18,7 +18,7 @@ class ShareDetailDataSource: ServiceConnectionHelper {
 }
 extension ShareDetailDataSource: ShareDetailDataSourceInterface {
     func getCompany(companyId: Int, handle: @escaping ServiceHandler) {
-        makePetition(urlString: "\(getCompanyUrl)\(companyId)", method: HttpPetitionMethod.get.stringify(), headers: nil, params: nil, handle: handle, refresh: true)
+        makePetition(urlString: "\(getCompanyUrl)\(companyId)", method: HttpPetitionMethod.get.stringify(), headers: nil, params: nil, handle: handle)
     }
     
     

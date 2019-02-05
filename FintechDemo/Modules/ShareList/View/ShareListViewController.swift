@@ -42,6 +42,9 @@ class ShareListViewController: BaseViewController {
         let nib = UINib(nibName: "CompanyTableViewCell", bundle: nil)
         self.companiesTableView.register(nib, forCellReuseIdentifier: "companyCell")
     }
+    @IBAction func refreshButtonClicked(_ sender: Any) {
+        self.presenter?.reloadView()
+    }
 }
 
 extension ShareListViewController: ShareListViewControllerInterface {

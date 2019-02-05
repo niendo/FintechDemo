@@ -34,7 +34,7 @@ public class ServiceConnectionHelper {
 extension ServiceConnectionHelper {
 
     
-    func makePetition(urlString: String, method: String, headers: [String: String]?, params: [String: AnyObject?]?, handle: @escaping ServiceHandler, refresh: Bool = false) {
+    func makePetition(urlString: String, method: String, headers: [String: String]?, params: [String: AnyObject?]?, handle: @escaping ServiceHandler) {
         
         var newHeaders = headers
         if newHeaders == nil {
@@ -91,7 +91,7 @@ extension ServiceConnectionHelper {
             
             let error: Error? = response.error
             
-           var networkResponse: NetworkResponse?
+            var networkResponse: NetworkResponse?
             
             if response.response != nil {
                 

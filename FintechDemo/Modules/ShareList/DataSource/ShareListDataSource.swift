@@ -20,7 +20,7 @@ class ShareListDataSource: ServiceConnectionHelper {
 }
 extension ShareListDataSource: ShareListDataSourceInterface {
     func getCompaniesFromService(handle: @escaping ServiceHandler) {
-        makePetition(urlString: getCompaniesUrl, method: HttpPetitionMethod.get.stringify(), headers: nil, params: nil, handle: handle, refresh: true)
+        makePetition(urlString: getCompaniesUrl, method: HttpPetitionMethod.get.stringify(), headers: nil, params: nil, handle: handle)
     }
     
 
